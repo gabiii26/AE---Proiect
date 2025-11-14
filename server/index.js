@@ -6,6 +6,8 @@ const cors = require('cors');
 const userRoutes = require('./routes/user.routes');
 const authRoutes = require('./routes/auth.routes');
 const productRoutes = require('./routes/product.routes');
+const orderRoutes = require ('./routes/order.routes');
+const cartRoutes = require('./routes/cart.routes');
 
 const app = express();
 dotenv.config();
@@ -22,6 +24,8 @@ app.get('/', (req, res) => {
 app.use('/users', userRoutes);
 app.use('/auth', authRoutes);
 app.use('/products', productRoutes);
+app.use('/orders', orderRoutes);
+app.use('/cart', cartRoutes);
 
 app.listen(PORT, () => {
     console.log(`Server successfully started on port ${PORT}`);

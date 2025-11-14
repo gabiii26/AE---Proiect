@@ -7,6 +7,9 @@ import Register from "./pages/Register";
 import Login from "./pages/Login";
 import CreateProductPage from "./pages/CreateProductPage";
 import EditProductPage from "./pages/EditProductPage";
+import CartPage from "./pages/CartPage";
+import OrderSummaryPage from "./pages/OrderSummaryPage";
+import MyOrdersPage from "./pages/MyOrdersPage";
 import { ProtectedLayout, AuthLayout } from "./components/ProtectedRoute";
 import { AdminRoute } from "./components/AdminRoute";
 
@@ -22,6 +25,18 @@ export const router = createBrowserRouter([
       {
         path: "products",
         element: <ProductsPage />,
+      },
+      {
+        path: "cart",
+        element: <CartPage />,
+      },
+      {
+        path: "order-summary",
+        element: <OrderSummaryPage />,
+      },
+      {
+        path: "orders",
+        element: <MyOrdersPage />,
       },
       // Protected routes - require authentication
       {
